@@ -1,0 +1,95 @@
+@font-face{
+			font-family: SerifHeader;
+			src: url(serif-regular.ttf);
+		}
+* {
+ 			font-family: SerifHeader;
+		}
+
+@font-face{
+			font-family: SerifBody;
+			src: url(poppins-regular.ttf);
+		}
+* {
+ 			font-family: SerifBody;
+		}
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'SerifBody', sans-serif;
+	font-size: 14px;
+	padding: 10px;
+	background-color: #F1F1F1;
+	font-weight: medium;
+}
+
+.header {
+	padding: 30px;
+	width: 100%;
+	text-align: center;
+	background: #FFFFFF;
+}
+
+.headertext {
+	font-size: 120%;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: rgba(252, 23, 34, 0);
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: #F2F2F2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar a:hover {
+	background-color: #DDD;
+	color: #000000;
+	transition: 1s;
+}
+
+.wrapper {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.leftcontent {
+	float: left;
+	width: 75%;
+}
+
+.rightcontent {
+	float: right;
+	width: 25%;
+	padding-left: 20px;
+}
+
+.post {
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.picture {
+	background-color: #AAA;
+	width: 100%;
+	padding: 20px;
+}
+
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #DDD;
+	margin-top: 20px;
+}

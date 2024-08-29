@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LAYOUT CSS 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="">
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+.header {
+	padding: 30px;
+	width: 100%;
+	text-align: center;
+	background: #000000;
+	opacity: 0.75;
+	font-family: 'DM Serif Display', serif;
+	font-weight: normal;
+	background-image: url(img1.png);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0;
+	background-size: 100%;
+}
+div {
+	margin: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	padding: 0;
+	background-color: #F1F1F1;
+	font-weight: medium;
+}
+
+.header h1 {
+	font-size: 110px;
+	text-align: left;
+	margin-left: 5%;
+	color: white;
+}
+
+.subheader_line {
+	width: 45%;
+	margin-left: 5%;
+	margin-right: auto;
+	height: 2px;
+}
+
+.black_line {
+	width: 65%;
+	height: 2px;
+	margin-top: -2%;
+}
+
+.header_socials {
+	vertical-align: bottom;
+	float: left;
+	position: absolute;
+	margin-left: 5%;
+
+}
+
+.button_contact {
+  	background-color:#3399ff;
+  	border:none; color:white;
+  	padding:10px 12px;
+  	text-align:center;
+  	text-decoration:none;
+  	display:inline-block;
+  	font-size:16px;
+  	border-radius: 10px;
+  	height: 100%;
+  	font-family: 'Poppins', sans-serif;
+ }
+
+ .button_contact:hover {
+  	background-color: #99ccff;
+
+ }
+
+.subheader {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 5%;
+	margin-top: -5%;
+	color: white;
+}
+
+.viewmywork {
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 5%;
+	float: left;
+	color: white;
+	border:3px solid white;
+  	padding:8px 10px;
+  	text-align:center;
+  	display:inline-block;
+  	font-size:16px;
+  	border-radius: 10px;
+}
+
+.wrapper {
+	content: "";
+	display: table;
+	clear: both;
+ }
+
+
+.post {
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.picture {
+	background-color: #AAA;
+	width: 100%;
+	padding: 20px;
+}
+
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #DDD;
+	margin-top: 20px;
+}
+
+.singlebodyparagraph {
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	display: block;
+	width:50%;
+	margin-left: 25%;
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5px 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	letter-spacing: 2.5px;
+}
+
+nav ul {
+	flex: 1;
+	text-align: right;
+	padding-right: 30px;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 30px;
+}
+
+nav ul li a{
+	color: #000000;
+	text-decoration: none;
+	position: relative;
+}
+
+nav ul li a::after{
+	content: '';
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: black;
+	transition: width 0.3s;
+}
+
+nav ul li a:hover::after{
+	width: 80%;
+}
+
+h2 {
+	font-size: 48px;
+	text-align: center;
+}
+
+h4 {
+	font-size: 24px;
+	text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+
+	<div id="home" class="header" style="font-family: SerifHeader;">
+		<div style="font-family: 'Poppins', sans-serif;">
+		<nav>
+		<ul>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#aboutme">ABOUT ME</a></li>
+			<li><a href="#portfolio">PORTFOLIO</a></li>
+			<li><a href="contact_page.php" class="button_contact">CONTACT ME</a></li>
+		</ul>
+	</nav>
+	</div>
+
+		<h1>Hi! I'm Anmi.</h1>
+		<br>
+		<p class="subheader">
+			I am an illustrator from Japan that loves to express myself with the beauty in <br>colors and light. I take inspiration from manga and anime and turn those materials <br> into my own rendition of my illustrations.
+		</p>
+		<br>
+		<br>
+		<br>
+		<a href="#">
+			<p class="viewmywork">
+			View my work here!
+			</p>
+		</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			<hr class="subheader_line">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p class="subheader">
+			SOCIAL MEDIA BUTTONS
+		</p>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+
+	<div id="aboutme">
+		<h2>About Me</h2>
+		<hr class="black_line" align="center">
+			<p class="singlebodyparagraph">I was born on January 2nd 2004 in Japan. I grew up watching anime and reading manga as well as immersive literatures. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+			<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			<br><br>
+		<h4>Education</h4>
+		<p class="singlebodyparagraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+				<br><br>
+		<h4>Skills</h4>
+		<p class="singlebodyparagraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+	</div>
+
+	<div id="portfolio" class="portfolio">
+		
+	</div>
+	<div class="footer">
+		<h3>INI FOOTER</h3>
+	</div>
+</body>
+</html>

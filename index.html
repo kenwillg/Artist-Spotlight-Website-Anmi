@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anmi's Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        padding: 30px;
+        width: 100%;
+        text-align: center;
+        background: #000000;
+        opacity: 0.75;
+        font-family: "DM Serif Display", serif;
+        font-weight: normal;
+        background-image: url(img1.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: 0;
+        background-size: 100%;
+      }
+      div {
+        margin: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        padding: 0;
+        background-color: #f1f1f1;
+        font-weight: medium;
+        margin: 0;
+      }
+
+      .header h1 {
+        font-size: 110px;
+        text-align: left;
+        margin-left: 5%;
+        color: white;
+      }
+
+      .subheader_line {
+        width: 45%;
+        margin-left: 5%;
+        margin-right: auto;
+        height: 2px;
+      }
+
+      .black_line {
+        width: 65%;
+        height: 2px;
+        margin-top: -2%;
+      }
+
+      .white_line {
+        width: 65%;
+        height: 2px;
+        margin-top: -2%;
+        color: white;
+      }
+
+      .header_socials {
+        vertical-align: bottom;
+        float: left;
+        position: absolute;
+        margin-left: 5%;
+      }
+
+      .button_contact {
+        background-color: #3399ff;
+        border: none;
+        color: black;
+        padding: 10px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .button_contact:hover {
+        background-color: #99ccff;
+      }
+
+      .subheader {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 5%;
+        margin-top: -5%;
+        color: white;
+      }
+
+      .exploremywork {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 5%;
+        float: left;
+        color: white;
+        border: 2px solid white;
+        padding: 8px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .wrapper {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: rgb(35, 35, 35);
+        margin: 0;
+      }
+
+      .singlebodyparagraph {
+        text-align: center;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        display: block;
+        width: 50%;
+        margin-left: 25%;
+      }
+
+      nav {
+        margin-top: -3%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 5px 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        letter-spacing: 2.5px;
+      }
+
+      nav ul {
+        flex: 1;
+        text-align: right;
+        padding-right: 30px;
+      }
+
+      nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 30px;
+      }
+
+      nav ul li a {
+        color: #000000;
+        text-decoration: none;
+        position: relative;
+      }
+
+      nav ul li a::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: black;
+        transition: width 0.3s;
+      }
+
+      nav ul li a:hover::after {
+        width: 80%;
+      }
+
+      h2.about {
+        font-size: 48px;
+        text-align: center;
+      }
+
+      h2.portfolio_title {
+        font-size: 48px;
+        text-align: center;
+        color: white;
+      }
+
+      h3 {
+        font-size: 36;
+        color: white;
+        font-weight: lighter;
+      }
+
+      h4 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .socialmedia_logo {
+        width: 30px;
+        margin-left: 5%;
+        margin-right: auto;
+      }
+
+      .logo {
+        width: 120px;
+      }
+
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+
+      .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1s all ease;
+      }
+      .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    </style>
+    <script type="text/javascript">
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+    </script>
+  </head>
+  <body>
+    <div id="home" class="header">
+      <div style="font-family: 'Poppins', sans-serif">
+        <nav>
+          <img src="logo.png" class="logo" />
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#aboutme">ABOUT ME</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li>
+              <a href="contact_page.php" class="button_contact">CONTACT ME</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <h1>Hi! I'm Anmi.</h1>
+      <br />
+      <p class="subheader">
+        I am an illustrator from Japan that loves to express myself with the
+        beauty in <br />colors and light. I take inspiration from manga and
+        anime and turn those materials <br />
+        into my own rendition of my illustrations.
+      </p>
+      <br />
+      <br />
+      <br />
+      <a href="#portfolio">
+        <p class="exploremywork">Explore my work here! &#x203A;</p>
+      </a>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr class="subheader_line" />
+      <br />
+      <br />
+      <a href="https://twitter.com/Anmi_" target="_blank"
+        ><img class="socialmedia_logo" src="Twitter.png" align="left"
+      /></a>
+      <a href="https://www.pixiv.net/en/users/212801" target="_blank"
+        ><img class="socialmedia_logo" src="Pixiv.png" align="left"
+      /></a>
+      <a href="https://t.co/2ngZdLRH2X" target="_blank"
+        ><img class="socialmedia_logo" src="Weibo.png" align="left"
+      /></a>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+
+    <div id="aboutme" class="container reveal">
+      <h2 class="about">About Me</h2>
+      <hr class="black_line" align="center" />
+      <p class="singlebodyparagraph">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit
+        amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        <br /><br />Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum." <br /><br />
+      </p>
+
+      <h4>Education</h4>
+      <p class="singlebodyparagraph">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+
+        <br /><br />
+      </p>
+
+      <h4>Skills</h4>
+      <p class="singlebodyparagraph">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+    </div>
+
+    <div
+      id="portfolio"
+      class="container reveal"
+      style="background-color: #4a3f47"
+    >
+      <br />
+      <h2 class="portfolio_title">Portfolio Gallery</h2>
+      <hr class="white_line" align="center" />
+
+      <div class="row">
+        <div class="column">
+          <img src="img2.jpg" style="width: 100%" />
+          <img src="img3.jpg" style="width: 100%" />
+          <img src="img4.jpg" style="width: 100%" />
+          <img src="img1.jpg" style="width: 100%" />
+        </div>
+        <div class="column">
+          <img src="img5.jpg" style="width: 100%" />
+          <img src="img6.jpg" style="width: 100%" />
+          <img src="img7.jpg" style="width: 100%" />
+          <img src="img8.jpg" style="width: 100%" />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <h3>Copyright, Kenneth William Gunawan 2022 &#xA9;</h3>
+      <p class="singlebodyparagraph" style="color: grey; margin-top: -1%">
+        Artwork rights reserved to Anmi.
+      </p>
+    </div>
+  </body>
+</html>
